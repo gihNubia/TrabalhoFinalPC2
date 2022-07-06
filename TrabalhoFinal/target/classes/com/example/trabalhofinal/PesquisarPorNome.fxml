@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="303.0" prefWidth="695.0" style="-fx-background-color: Salmon;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.PesquisarPorNome">
+   <children>
+      <Pane layoutX="15.0" layoutY="58.0" prefHeight="225.0" prefWidth="666.0" style="-fx-background-color: lightSalmon;">
+         <children>
+            <GridPane layoutX="6.0" layoutY="20.0" prefHeight="163.0" prefWidth="651.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="116.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="550.0" minWidth="10.0" prefWidth="550.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="68.0" prefWidth="105.0" text="Nome:" textFill="#721d0e">
+                     <font>
+                        <Font name="Comic Sans MS" size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="58.0" prefWidth="527.0" style="-fx-background-color: FBCDC9;" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Button layoutX="419.0" layoutY="165.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Pesquisar">
+               <font>
+                  <Font name="Comic Sans MS" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="547.0" layoutY="165.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Sair">
+               <font>
+                  <Font name="Comic Sans MS" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="17.0" layoutY="-1.0" prefHeight="59.0" prefWidth="475.0" text="Pesquisar por Nome" textFill="#721d0e">
+         <font>
+            <Font name="Comic Sans MS" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
