@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="421.0" prefWidth="782.0" style="-fx-background-color: Salmon;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.AdicionarTarefa">
+<AnchorPane prefHeight="421.0" prefWidth="782.0" style="-fx-background-color: Salmon;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.AdicionarTarefaController">
    <children>
       <Pane layoutX="10.0" layoutY="56.0" prefHeight="351.0" prefWidth="760.0" style="-fx-background-color: lightSalmon;">
          <children>
@@ -43,14 +43,14 @@
                         <Font name="Comic Sans MS" size="31.0" />
                      </font>
                   </Label>
-                  <TextField style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" />
-                  <TextField style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="nome" style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" />
+                  <TextField fx:id="data" style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="hora" style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="descricao" style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
-            <Button layoutX="484.0" layoutY="291.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Adicionar" />
-            <Button layoutX="629.0" layoutY="291.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Sair" />
+            <Button layoutX="484.0" layoutY="291.0" mnemonicParsing="false" onAction="#presAdc" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Adicionar" />
+            <Button layoutX="629.0" layoutY="291.0" mnemonicParsing="false" onAction="#presSair" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Sair" />
          </children>
       </Pane>
       <Label layoutX="15.0" prefHeight="54.0" prefWidth="575.0" text="Adicionar Tarefa" textFill="#862211">

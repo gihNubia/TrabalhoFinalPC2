@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.trabalhofinal.MostrarTodasAsTarefas"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="670.0" prefWidth="1112.0" style="-fx-background-color: salmon;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.MostrarTarefasController">
+   <children>
+      <Pane layoutX="13.0" layoutY="67.0" prefHeight="589.0" prefWidth="1087.0" style="-fx-background-color: lightsalmon;">
+         <children>
+            <Button layoutX="984.0" layoutY="531.0" mnemonicParsing="false" onAction="#presSair" prefHeight="49.0" prefWidth="89.0" style="-fx-background-color: FF865A;" text="sair">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="836.0" layoutY="531.0" mnemonicParsing="false" onAction="#presMostrar" prefHeight="49.0" prefWidth="103.0" style="-fx-background-color: FF865A;" text="mostrar">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Button>
+            <ScrollPane layoutX="7.0" layoutY="9.0" prefHeight="515.0" prefWidth="1063.0">
+               <content>
+                  <Label fx:id="tarefas" prefHeight="723.0" prefWidth="1057.0" style="-fx-background-color: salmon;" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Label layoutX="19.0" layoutY="8.0" prefHeight="50.0" prefWidth="850.0" text="Tarefas" textFill="#860b0b">
+         <font>
+            <Font name="Comic Sans MS" size="40.0" />
+         </font>
+      </Label>
+    <AnchorPane layoutX="398.0" layoutY="-137.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
 </AnchorPane>

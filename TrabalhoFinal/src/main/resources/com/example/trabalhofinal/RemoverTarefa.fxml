@@ -8,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="415.0" prefWidth="790.0" style="-fx-background-color: salmon;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.RemoverTarefa">
+<AnchorPane prefHeight="415.0" prefWidth="790.0" style="-fx-background-color: salmon;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhofinal.RemoverTarefaController">
    <children>
       <Pane layoutX="21.0" layoutY="57.0" prefHeight="344.0" prefWidth="749.0" style="-fx-background-color: lightSalmon;">
          <children>
@@ -23,7 +22,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <RadioButton mnemonicParsing="false" prefHeight="61.0" prefWidth="208.0" style="-fx-background-color: ;" text="Por Nome:" textFill="#720d0d">
+                  <RadioButton fx:id="radioNome" mnemonicParsing="false" prefHeight="61.0" prefWidth="208.0" style="-fx-background-color: ;" text="Por Nome:" textFill="#720d0d">
                      <font>
                         <Font name="Comic Sans MS" size="30.0" />
                      </font>
@@ -31,7 +30,7 @@
                         <ToggleGroup fx:id="grupo" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" prefHeight="59.0" prefWidth="212.0" style="0: ;" text="Por Data:" textFill="#720d0d" toggleGroup="$grupo" GridPane.rowIndex="1">
+                  <RadioButton fx:id="radioData" mnemonicParsing="false" prefHeight="59.0" prefWidth="212.0" style="0: ;" text="Por Data:" textFill="#720d0d" toggleGroup="$grupo" GridPane.rowIndex="1">
                      <font>
                         <Font name="Comic Sans MS" size="30.0" />
                      </font>
@@ -39,12 +38,18 @@
                         <Insets />
                      </opaqueInsets>
                   </RadioButton>
-                  <TextField style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" />
-                  <TextField style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="nome" style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" />
+                  <TextField fx:id="data" style="-fx-background-color: #FBCDC9;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
-            <Button layoutX="494.0" layoutY="284.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Pesquisar" />
-            <Button layoutX="630.0" layoutY="284.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Sair" />
+            <Button layoutX="494.0" layoutY="284.0" mnemonicParsing="false" onAction="#presExcluir" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Excluir">
+               <font>
+                  <Font name="Comic Sans MS" size="22.0" />
+               </font></Button>
+            <Button layoutX="630.0" layoutY="284.0" mnemonicParsing="false" onAction="#presSair" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: FF865A;" text="Sair">
+               <font>
+                  <Font name="Comic Sans MS" size="22.0" />
+               </font></Button>
          </children>
       </Pane>
       <Label layoutX="25.0" layoutY="-2.0" prefHeight="62.0" prefWidth="427.0" text="Remover Tarefa" textFill="#720d0d">
